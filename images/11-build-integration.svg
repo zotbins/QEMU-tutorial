@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 270" width="820" height="270" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="820" height="270" fill="#ffffff" rx="10"/>
+<text x="410.0" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">Build integration: both files must know about your device</text>
+<rect x="30" y="100" width="170" height="70" rx="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="115.0" y="131.05" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">mydev.c</text>
+<text x="115.0" y="148.05" text-anchor="middle" font-size="13" font-weight="400" fill="#111827" font-family="Consolas,monospace">new source file</text>
+<rect x="260" y="50" width="210" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="365.0" y="81.2" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Kconfig</text>
+<text x="365.0" y="97.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">config MYDEV (whether)</text>
+<rect x="260" y="150" width="210" height="70" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="365.0" y="181.2" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">meson.build</text>
+<text x="365.0" y="197.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">CONFIG_MYDEV -&gt; mydev.c</text>
+<rect x="540" y="100" width="240" height="70" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="660.0" y="131.2" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Machine Kconfig</text>
+<text x="660.0" y="147.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">select MYDEV</text>
+<line x1="200" y1="135" x2="260" y2="85" stroke="#374151" stroke-width="1.8"/>
+<polygon points="260.0,85.0 255.5,95.2 249.1,87.6" fill="#374151"/>
+<line x1="200" y1="135" x2="260" y2="185" stroke="#374151" stroke-width="1.8"/>
+<polygon points="260.0,185.0 249.1,182.4 255.5,174.8" fill="#374151"/>
+<line x1="470" y1="85" x2="540" y2="125" stroke="#374151" stroke-width="1.8"/>
+<polygon points="540.0,125.0 528.8,124.4 533.8,115.7" fill="#374151"/>
+<line x1="470" y1="185" x2="540" y2="145" stroke="#374151" stroke-width="1.8"/>
+<polygon points="540.0,145.0 533.8,154.3 528.8,145.6" fill="#374151"/>
+<text x="410" y="250" text-anchor="middle" font-size="12" fill="#374151">Missing either file = the device is silently never built.</text>
+</svg>

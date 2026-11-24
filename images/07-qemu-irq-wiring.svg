@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 330" width="820" height="330" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="820" height="330" fill="#ffffff" rx="10"/>
+<text x="410.0" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">qemu_irq: one-bit level signals wire devices together</text>
+<rect x="40" y="90" width="200" height="110" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="140.0" y="133.2" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Device A</text>
+<text x="140.0" y="149.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">qdev_init_gpio_out(</text>
+<text x="140.0" y="165.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">  &amp;s-&gt;irq_out, 1)</text>
+<rect x="580" y="90" width="200" height="110" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="680.0" y="133.2" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Device B</text>
+<text x="680.0" y="149.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">qdev_init_gpio_in(</text>
+<text x="680.0" y="165.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">  handler, n_lines)</text>
+<line x1="240" y1="145" x2="580" y2="145" stroke="#374151" stroke-width="1.8"/>
+<polygon points="580.0,145.0 570.0,150.0 570.0,140.0" fill="#374151"/>
+<text x="410" y="130" text-anchor="middle" font-size="12" fill="#374151" font-family="Consolas,monospace">qemu_set_irq(s-&gt;irq_out, level)</text>
+<text x="410" y="175" text-anchor="middle" font-size="11" fill="#374151" font-family="Consolas,monospace">board: qdev_connect_gpio_out(a, 0, qdev_get_gpio_in(b, 3))</text>
+<rect x="40" y="240" width="330" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="205.0" y="266.2" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Output</text>
+<text x="205.0" y="282.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827">a line your device DRIVES (pin out, interrupt)</text>
+<rect x="450" y="240" width="330" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="615.0" y="266.2" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Input</text>
+<text x="615.0" y="282.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827">a line you RECEIVE: handler(opaque, n, level)</text>
+</svg>

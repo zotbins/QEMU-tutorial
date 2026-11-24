@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 330" width="820" height="330" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="820" height="330" fill="#ffffff" rx="10"/>
+<text x="410.0" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">Timers: QEMU never sleeps, it calls you back</text>
+<rect x="30" y="70" width="190" height="70" rx="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="125.0" y="101.05" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Guest write</text>
+<text x="125.0" y="118.05" text-anchor="middle" font-size="13" font-weight="400" fill="#111827">starts an operation</text>
+<rect x="280" y="70" width="230" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="395.0" y="101.2" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">timer_mod(t, now + delay)</text>
+<text x="395.0" y="117.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">arm the timer</text>
+<rect x="570" y="70" width="220" height="70" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="680.0" y="101.05" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">QEMU main loop</text>
+<text x="680.0" y="118.05" text-anchor="middle" font-size="13" font-weight="400" fill="#111827">keeps running other work</text>
+<line x1="220" y1="105" x2="280" y2="105" stroke="#374151" stroke-width="1.8"/>
+<polygon points="280.0,105.0 270.0,110.0 270.0,100.0" fill="#374151"/>
+<line x1="510" y1="105" x2="570" y2="105" stroke="#374151" stroke-width="1.8"/>
+<polygon points="570.0,105.0 560.0,110.0 560.0,100.0" fill="#374151"/>
+<rect x="570" y="200" width="220" height="80" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="680.0" y="236.05" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Timer expires</text>
+<text x="680.0" y="253.05" text-anchor="middle" font-size="13" font-weight="400" fill="#111827">your callback runs</text>
+<line x1="680" y1="140" x2="680" y2="200" stroke="#374151" stroke-width="1.8"/>
+<polygon points="680.0,200.0 675.0,190.0 685.0,190.0" fill="#374151"/>
+<text x="745" y="172" text-anchor="middle" font-size="11" fill="#374151">virtual clock hits deadline</text>
+<rect x="280" y="200" width="230" height="80" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="395.0" y="228.2" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">callback</text>
+<text x="395.0" y="244.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">set status/done bit</text>
+<text x="395.0" y="260.2" text-anchor="middle" font-size="12" font-weight="400" fill="#111827" font-family="Consolas,monospace">update_outputs() raises IRQ</text>
+<line x1="570" y1="240" x2="510" y2="240" stroke="#374151" stroke-width="1.8"/>
+<polygon points="510.0,240.0 520.0,235.0 520.0,245.0" fill="#374151"/>
+<text x="150" y="235" text-anchor="middle" font-size="12" fill="#374151">Use QEMU_CLOCK_VIRTUAL so</text>
+<text x="150" y="253" text-anchor="middle" font-size="12" fill="#374151">timing follows guest time.</text>
+</svg>

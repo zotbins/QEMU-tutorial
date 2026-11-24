@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" width="820" height="430" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+<rect width="820" height="430" fill="#ffffff" rx="10"/>
+<text x="410.0" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">MMIO: registers appear in the physical address space</text>
+<rect x="40" y="60" width="200" height="330" rx="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="140.0" y="229.55" text-anchor="middle" font-size="13" font-weight="400" fill="#111827"></text>
+<rect x="50" y="70" width="180" height="44" rx="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="140.0" y="88.35" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">ROM / flash</text>
+<text x="140.0" y="103.35" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">0x0000_0000</text>
+<rect x="50" y="122" width="180" height="44" rx="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="140.0" y="140.35" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">RAM</text>
+<text x="140.0" y="155.35" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">0x2000_0000</text>
+<rect x="50" y="174" width="180" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="140.0" y="192.35" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">Device A (MMIO)</text>
+<text x="140.0" y="207.35" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">0x6000_0000</text>
+<rect x="50" y="226" width="180" height="44" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="140.0" y="244.35" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">Your device (MMIO)</text>
+<text x="140.0" y="259.35" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">0x6000_1000</text>
+<rect x="50" y="278" width="180" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="140.0" y="296.35" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">Device C (MMIO)</text>
+<text x="140.0" y="311.35" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">0x6000_2000</text>
+<rect x="50" y="330" width="180" height="44" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="140.0" y="348.35" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">unimplemented_device</text>
+<text x="140.0" y="363.35" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">0x7000_0000</text>
+<text x="140" y="412" text-anchor="middle" font-size="12" fill="#374151">system address space</text>
+<rect x="360" y="120" width="200" height="100" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="460.0" y="158.85" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">MemoryRegion</text>
+<text x="460.0" y="173.85" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">memory_region_init_io()</text>
+<text x="460.0" y="188.85" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">size 0x1000, ops, opaque</text>
+<rect x="360" y="260" width="200" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="460.0" y="288.85" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">MemoryRegionOps</text>
+<text x="460.0" y="303.85" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">.read  .write</text>
+<text x="460.0" y="318.85" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">.valid access sizes</text>
+<rect x="620" y="170" width="190" height="100" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="715.0" y="201.35" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">Your callbacks</text>
+<text x="715.0" y="216.35" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">read(opaque, offset, size)</text>
+<text x="715.0" y="231.35" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">write(opaque, offset,</text>
+<text x="715.0" y="246.35" text-anchor="middle" font-size="11" font-weight="400" fill="#111827" font-family="Consolas,monospace">      val, size)</text>
+<line x1="240" y1="196" x2="360" y2="170" stroke="#374151" stroke-width="1.8"/>
+<polygon points="360.0,170.0 351.3,177.0 349.2,167.2" fill="#374151"/>
+<text x="300" y="165" text-anchor="middle" font-size="11" fill="#374151">sysbus_mmio_map()</text>
+<line x1="460" y1="220" x2="460" y2="260" stroke="#374151" stroke-width="1.8"/>
+<polygon points="460.0,260.0 455.0,250.0 465.0,250.0" fill="#374151"/>
+<line x1="560" y1="300" x2="705" y2="270" stroke="#374151" stroke-width="1.8"/>
+<polygon points="705.0,270.0 696.2,276.9 694.2,267.1" fill="#374151"/>
+<text x="715" y="300" text-anchor="middle" font-size="11" fill="#374151">offset is relative to the region base,</text>
+<text x="715" y="316" text-anchor="middle" font-size="11" fill="#374151">NOT the absolute address</text>
+</svg>
